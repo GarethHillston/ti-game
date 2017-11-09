@@ -21,18 +21,35 @@ export default class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-          <View style={styles.welcomeContainer}>
+          <View style={styles.portraitContainer}>
             <Image
               source={require('../assets/images/lion.jpeg')}
               style={styles.welcomeImage}
             />
           </View>
 
-          <View style={styles.getStartedContainer}>
-            <Text style={styles.getStartedText}>Space Cats of Hacan</Text>
+          <View style={styles.textContainer}>
+            <Text style={styles.header}>Space Cats of Hacan</Text>
 
-            <Text style={styles.getStartedText}>
+            <Text style={styles.subHeader}>
               Special abilities
+            </Text>
+            <Text style={styles.text}>
+              Can roar real scary like
+            </Text>
+
+            <Text style={styles.subHeader}>
+              Starting units
+            </Text>
+            <Text style={styles.text}>
+              One dozen cats
+            </Text>
+
+            <Text style={styles.subHeader}>
+              Starting tech
+            </Text>
+            <Text style={styles.text}>
+              Claws, freaky eyes
             </Text>
           </View>
         </ScrollView>
@@ -54,12 +71,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
-  developmentModeText: {
-    marginBottom: 20,
-    color: 'rgba(0,0,0,0.4)',
-    fontSize: 14,
-    lineHeight: 19,
-    textAlign: 'center',
+  portraitContainer: {
+    flex: 0.33,
+    backgroundColor: 'skyblue',
+  },
+  textContainer: {
+    flex: 0.66,
+    backgroundColor: 'powderblue',
   },
   contentContainer: {
     paddingTop: 30,
@@ -91,9 +109,21 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     paddingHorizontal: 4,
   },
-  getStartedText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
+  text: {
+    fontSize: 15,
+    color: 'rgba(200,180,190, 1)',
+    lineHeight: 24,
+    textAlign: 'center',
+  },
+  subHeader: {
+    fontSize: 18,
+    color: 'rgba(175,130,150, 1)',
+    lineHeight: 24,
+    textAlign: 'center',
+  },
+  header: {
+    fontSize: 20,
+    color: 'rgba(115,100,109, 1)',
     lineHeight: 24,
     textAlign: 'center',
   },
